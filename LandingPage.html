@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Exemplo</title>
+    <style>
+        /* Reset básico para garantir consistência entre navegadores */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth; /* Scroll suave para navegação interna */
+        }
+
+        /* Estilo do Header */
+        header {
+            background: url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200') no-repeat center center/cover;
+            height: 100vh; /* Cobrir a altura da tela */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out; /* Animação de entrada */
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 20px;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
+            background: #52d159;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        header a:hover {
+            background: #4aa54f;
+            transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+        }
+
+        /* Animação de fadeIn para o título */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Seção de Benefícios */
+        .beneficios {
+            padding: 50px 20px;
+            text-align: center;
+            background: #fff;
+        }
+        .beneficios h2 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .beneficios .card {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background: #f4f4f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .beneficios .card:hover {
+            transform: translateY(-10px); /* Efeito de levitação */
+        }
+        .beneficios .card h3 {
+            color: #007BFF;
+        }
+
+        /* Seção de Depoimentos */
+        .depoimentos {
+            padding: 50px 20px;
+            background: #f4f4f9;
+            text-align: center;
+        }
+        .depoimentos h2 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .depoimentos .card {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .depoimentos .card p {
+            font-style: italic;
+            color: #555;
+        }
+        .depoimentos .card span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        /* Seção de Recursos */
+        .recursos {
+            padding: 50px 20px;
+            text-align: center;
+            background: #fff;
+        }
+        .recursos h2 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .recursos ul {
+            list-style: none;
+            padding: 0;
+        }
+        .recursos ul li {
+            margin: 15px 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Seção de Cadastro */
+        .cadastro {
+            padding: 50px 20px;
+            text-align: center;
+            background: #007BFF;
+            color: white;
+        }
+        .cadastro h2 {
+            margin-bottom: 20px;
+        }
+        .cadastro input[type="email"] {
+            padding: 10px;
+            width: 250px;
+            margin: 10px 0;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        .cadastro button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .cadastro button:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+        .cadastro #mensagem {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            .beneficios .card, .depoimentos .card {
+                width: 80%;
+                margin: 10px auto;
+            }
+            .cadastro input[type="email"] {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header com imagem de fundo e Call to Action -->
+    <header>
+        <h1>Transforme seu Negócio</h1>
+        <p>Descubra estratégias para crescer online!</p>
+        <a href="#cadastro">Saiba Mais</a>
+    </header>
+
+    <!-- Seção de Benefícios -->
+    <section class="beneficios">
+        <h2>Por que escolher nossa solução?</h2>
+        <div class="card">
+            <h3>Fácil de Usar</h3>
+            <p>Interface intuitiva para todos os níveis de usuários.</p>
+        </div>
+        <div class="card">
+            <h3>Economia de Tempo</h3>
+            <p>Automatize tarefas repetitivas e foque no que importa.</p>
+        </div>
+        <div class="card">
+            <h3>Suporte 24/7</h3>
+            <p>Equipe especializada disponível a qualquer momento.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="depoimentos">
+        <h2>O que nossos clientes dizem</h2>
+        <div class="card">
+            <p>"Incrível! Minha produtividade aumentou 50%."</p>
+            <span>— João Silva</span>
+        </div>
+        <div class="card">
+            <p>"A melhor ferramenta que já usei. Recomendo!"</p>
+            <span>— Maria Souza</span>
+        </div>
+        <div class="card">
+            <p>"Suporte excepcional e resultados rápidos."</p>
+            <span>— Carlos Oliveira</span>
+        </div>
+    </section>
+
+    <!-- Seção de Recursos -->
+    <section class="recursos">
+        <h2>Recursos Incríveis</h2>
+        <ul>
+            <li>Relatórios detalhados em tempo real.</li>
+            <li>Integração com ferramentas populares.</li>
+            <li>Personalização total para suas necessidades.</li>
+        </ul>
+    </section>
+
+    <!-- Seção de Cadastro -->
+    <section class="cadastro" id="cadastro">
+        <h2>Inscreva-se para receber novidades!</h2>
+        <input type="email" id="email" placeholder="Seu e-mail" required>
+        <button onclick="cadastrar()">Quero Receber!</button>
+        <p id="mensagem"></p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 - Todos os direitos reservados. | <a href="#">Política de Privacidade</a></p>
+    </footer>
+
+    <!-- JavaScript para ação do formulário -->
+    <script>
+        function cadastrar() {
+            const email = document.getElementById("email").value;
+            const mensagem = document.getElementById("mensagem");
+
+            // Validação simples do e-mail
+            if (email && email.includes("@")) {
+                mensagem.innerText = "Obrigado por se inscrever!";
+                mensagem.style.color = "#ffffff";
+                document.getElementById("email").value = ""; // Limpa o campo
+            } else {
+                mensagem.innerText = "Por favor, insira um e-mail válido.";
+                mensagem.style.color = "#dc3545"; // Feedback visual de erro
+            }
+        }
+    </script>
+</body>
+</html>
